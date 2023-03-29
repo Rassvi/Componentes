@@ -10,16 +10,19 @@ const Carta = () => {
     return (
         <View style={[
             layoutDisplay["layout--card"],
-            utilitiesDisplay["shadow--md"],
+            utilitiesDisplay["shadow--sm"],
+            utilitiesDisplay["color--bg-complementary-2"],
+            utilitiesDisplay["radius--md"],
         ]}
         >
             <View style={[
                 utilitiesDisplay["p--2"],
-                textDisplay["txt--center"],   
                 utilitiesDisplay["color--bg-dominant"],
+                utilitiesDisplay["radius--md"],
             ]}>
                 <Text style={[
                     textDisplay["text--xxl"],
+                    textDisplay["txt--center"],
                     textDisplay["txt--color-main-title"]
                 ]}>Amlito</Text>
             </View>
@@ -32,11 +35,13 @@ const Carta = () => {
             ]}>
                 <View style={[
                     flexDisplay["sz--1"],
+                    flexDisplay["items--center"],
                 ]}>
                     <Image style={[
                         utilitiesDisplay["image--responsive"],
                         utilitiesDisplay["color--bg-secondary"],
-                        utilitiesDisplay["radius--xl"]
+                        utilitiesDisplay["radius--xl"],
+                        utilitiesDisplay["image--contain"]
                     ]}
                         source={require('../assets/img/amlito.png')}
                     />
@@ -50,15 +55,15 @@ const Carta = () => {
                 ]}>
                     <Text style={[
                         textDisplay["text--md"],
-                        textDisplay["txt--color-sub-title"]
+                        textDisplay["txt--color-remarked"]
                     ]}>Correo: Amlito@benitojuares.com</Text>
                     <Text style={[
                         textDisplay["text--md"],
-                        textDisplay["txt--color-sub-title"]
+                        textDisplay["txt--color-remarked"]
                     ]}>Celular: 614 111 1111</Text>
                     <Text style={[
                         textDisplay["text--md"],
-                        textDisplay["txt--color-sub-title"]
+                        textDisplay["txt--color-remarked"]
                     ]}>Escuela: Amlito</Text>
                 </View>
             </View>

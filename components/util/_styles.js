@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { mainColors, textColors } from "./_colores";
+import { mainColors, temaBatman, textColors } from "./_colores";
 import { myTextSizes } from "./_text";
 
 const flexDisplay = StyleSheet.create({
@@ -27,7 +27,6 @@ const flexDisplay = StyleSheet.create({
     'sz--3': { flex: 3, },
 
     // gaps
-
     'gap--1': { gap: 5, },
     'gap--2': { gap: 10, },
     'gap--3': { gap: 15, },
@@ -39,11 +38,17 @@ const textDisplay = StyleSheet.create({
     'txt--center': { textAlign: 'center' },
     'txt--left': { textAlign: 'left' },
     'txt--right': { textAlign: 'right' },
+    'txt--justify': { textAlign: 'justify' },
 
     // Colores de texto - "Al texto"
     'txt--color-normal': { color: textColors["txt--normal"] },
     'txt--color-main-title': { color: textColors["txt--main-title"] },
     'txt--color-sub-title': { color: textColors["txt--sub-title"] },
+    'txt--color-remarked': { color: textColors["txt--remarked"] },
+
+    'txt--batman-normal': {},
+    'txt--batman-main-title': {},
+    'txt--batman-sub-title': {},
 
     // Tamaños de los textos
     'text--ls': { fontSize: myTextSizes["text--ls"] },
@@ -53,32 +58,51 @@ const textDisplay = StyleSheet.create({
 });
 
 const utilitiesDisplay = StyleSheet.create({
-    // WEAS UTILES
+    // WEAS UTILES de la imagen
     'image--responsive': {
         flex: 1,
         width: '100%',
         aspectRatio: 1,
         height: undefined,
-        resizeMode: 'contain',
+    },
+
+    'image--cover':{ resizeMode: 'cover' },
+    'image--contain':{ resizeMode: 'contain' },
+
+    'image--responsive-icon' : { 
+        flex: 0.12,
+        aspectRatio: 1,
+        height: undefined,
+        resizeMode: 'contain'
+    },
+
+    // border
+
+    'borders': {
+        borderWidth: 0.5,
     },
 
     // Colores
+    'color--bg-accent': { backgroundColor: mainColors['bg--accent'] },
     'color--bg-dominant': { backgroundColor: mainColors['bg--dominant'] },
     'color--bg-secondary': { backgroundColor: mainColors['bg--secondary'] },
-    'color--bg-accent': { backgroundColor: mainColors['bg--accent'] },
     'color--bg-complementary-1': { backgroundColor: mainColors['bg--complementary-1'] },
+    'color--bg-complementary-2': { backgroundColor: mainColors['bg--complementary-2'] },
+
+    'color--batman-fondo': { backgroundColor: temaBatman.fondo },
+    'color--batman-iconos': { backgroundColor: temaBatman.iconos },
 
     // Sombras
     'shadow--sm': {
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 3,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
 
-        elevation: 5,
+        elevation: 6,
     },
     'shadow--md': {
         shadowColor: "#000",
@@ -117,7 +141,7 @@ const utilitiesDisplay = StyleSheet.create({
 const layoutDisplay = StyleSheet.create({
     'layout--card': {
         width: '95%',
-        minHeight: 210,
+        minHeight: 220,
     }
 });
 
